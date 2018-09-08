@@ -1,15 +1,24 @@
 @charset "utf-8";
 
 /* 
-
+    This section of code tells the font you want the text to be on your website. Using the src element atttribute, code now gives the computer exactly where to find what text we want. 
 */
 @font-face {
-    font-family: The Champagne;
-    src: url(cac_champagne.woff), url(cac_champagne.ttf);
-    font-family: The Grudge;
-    src: url(1942.woff), url(1942.ttf);
-    font-family: The Dobkin;
-    src: url(DobkinPlain.woff), url(DobkinPlain.ttf)
+    font-family: Champagne;
+    src: url('cac_champagne.woff') format('woff'),
+        url('cac_champagne.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: Grunge;
+    src: url('1942.woff') format('woff'),
+        url('1942.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: Dobkin;
+    src: url('DobkinPlain.woff') format('woff'),
+        url('DobkinPlain.ttf') format('truetype');
 }
 
 /*
@@ -25,6 +34,9 @@
 
 */
 /* Structural Styles */
+/* 
+The code below hold some of the more basic CSS style rules for the main content of the website. These include back-ground color, color, and more font details. There  are also some style rules defining the padding and margin spacing of the different elements. These make the website look much more appealing to look at.  
+*/
 html {
     background-color: hsl(91, 8%, 56%);
 }
@@ -57,9 +69,11 @@ address {
 }
 
 /* Navigation Styles */
+/* 
+The navigation stlyes hold mostly the same CSS style rules as the above code, except these are for specifcally the nav. This code gets very specific of some of the styles nav, like when you hover over it, or how it looks when you click on it. This code makes the nav section look more appealing.
+*/
 nav {
     font-family: 'Trebuchet MS', 'Helvetica', sans-serif;
-    padding: 10px;
 }
 
 nav>ul>li>a:link,
@@ -67,6 +81,8 @@ nav>ul>li>a:visited {
     color: white;
     background-color: hsla(0, 0%, 42%, 0.4);
     text-decoration: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 nav>ul>li>a:hover,
@@ -87,16 +103,43 @@ section#play1 {
     background-color: hsl(240, 100%, 88%);
 }
 
+section#play1 h1 {
+    font-family: Champagne, cursive;
+}
+
 section#play2 {
     background-color: hsl(25, 88%, 73%);
+}
+
+section#play2 h1 {
+    font-family: Grunge, 'Times New Roman', Times, serif;
 }
 
 section#play3 {
     background-color: hsl(0, 100%, 75%);
 }
 
+section#play3 h1 {
+    font-family: Impact, Charcoal, sans-serif;
+}
+
 section#play4 {
-    background-color: hsl(hue, saturation, lightness)
+    background-color: hsl(296, 86%, 86%);
+}
+
+section#play4 h1 {
+    font-family: Dobkin, cursive;
 }
 
 /* Description List Styles */
+dt {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: hsla(0, 0%, 0%, 0.4);
+}
+
+dd {
+    font-size: 1.3em;
+    margin-left: 0px;
+    margin-bottom: 10px;
+}
